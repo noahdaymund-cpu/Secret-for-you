@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+    :root {
+      --blue: #cfe7f3;
+      --dark: #0f0f0f;
+      --wire: rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(180deg, var(--blue), #ffffff);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: var(--dark);
+    }
+
+    /* wire lines */
+    body::before,
+    body::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 200%;
+      background: var(--wire);
+      top: -50%;
+    }
+
+    body::before {
+      left: 15%;
+      transform: rotate(2deg);
+    }
+
+    body::after {
+      right: 18%;
+      transform: rotate(-2deg);
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--wire);
+      padding: 3rem;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--wire);
+      background: transparent;
+      margin-bottom: 1rem;
+      outline: none;
+      font-size: 14px;
+      color: var(--dark);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: var(--dark);
+      color: white;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: opacity 0.3s;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    .error {
+      color: black;
+      font-size: 13px;
+      margin-top: 10px;
+      opacity: 0.7;
+    }
+
+    .secret {
+      display: none;
+      line-height: 1.8;
+      font-size: 15px;
+      text-align: left;
+      margin-top: 1rem;
+      white-space: pre-wrap;
+    }
+
+    .wire-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--wire);
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container" id="login">
+    <h1>Enter</h1>
+    <input type="password" id="password" placeholder="password">
+    <button onclick="checkPassword()">unlock</button>
+    <div class="error" id="error"></div>
+  </div>
+
+  <div class="container secret" id="secret">
+    <h1>For You</h1>
+    <div class="wire-divider"></div>
+    <p>
+      I need to tell you something that has been living inside me for longer than I’ve admitted to myself, something that didn’t arrive loudly or demand attention but instead settled into my chest and made itself at home, something that grew with patience and certainty until it became impossible to ignore, because loving you was never a moment, it was a process, a slow unfolding, a realization that arrived not with boldness but with recognition, like my heart had been waiting for you long before I knew your name. I didn’t wake up one day and decide to feel this way; I noticed it in the smallest places first, in how my thoughts softened when they drifted toward you, in how my shoulders relaxed when you were near, in how silence felt less empty simply because you existed somewhere in the world. Loving you felt natural in a way that didn’t scare me, steady in a way that didn’t ask for proof, like my heart understood something my mind was still catching up to. You became present in my life the way warmth does, gradually, until one day I couldn’t remember what it felt like to be cold. I found myself wanting to tell you things I had never put into words before, not because I needed you to fix anything, but because your presence made honesty feel safe. There is something about you that invites truth, that makes vulnerability feel less like a risk and more like a relief, and I think that is where my love first rooted itself, in the feeling of being able to be fully myself without shrinking or performing or pretending. I love you not in a way that wants to consume you or hold you tightly out of fear, but in a way that wants to understand you, to listen to you, to stand beside you without trying to rewrite who you are. My love for you is not loud or demanding; it is attentive, patient, and deeply respectful, the kind that notices when your voice changes and wonders what you’re not saying, the kind that celebrates your joy without envy and sits quietly with your pain without trying to rush it away. I don’t love you because I need you to complete me; I love you because I know you complete me, because you brought color into places I didn’t realize had faded, because your existence made the world feel more dimensional, more alive, more worth leaning into. Being near you feels like alignment, like something in me finally facing the right direction. I catch myself imagining futures not because I’m desperate to escape the present, but because you make the idea of tomorrow feel gentle instead of overwhelming. When I think of you, I don’t feel urgency; I feel calm, the kind that comes from trust, from believing that whatever happens doesn’t need to be forced to be real. I want you to know that this feeling doesn’t come with expectations tied around its neck, doesn’t come with demands or timelines or conditions you have to meet to earn it. I am not confessing because I want something taken from you; I am confessing because what I feel is honest, and honesty deserves air. If you never chose me in the way my heart quietly hopes for, this love would not turn bitter or regretful, because knowing you has already been a gift, because loving you has already taught me something sacred about the way my heart is capable of showing up. But I also need you to know that if you were to step toward me, even gently, even uncertainly, you would not be stepping into something fragile or chaotic; you would be stepping into something steady, something that wants to grow with you rather than rush you, something that understands that love is not about possession but about presence. I see you not as an idea or a fantasy but as a whole, real person, with complexities and contradictions and softness and strength, and my affection for you exists alongside all of that, not despite it. I don’t want to be your escape from loneliness; I want to be your companion in fullness. I don’t want to be chosen out of fear of being alone; I want to be chosen because being together feels right, because there is ease and laughter and quiet understanding between us. When I imagine loving you openly, it doesn’t look dramatic or overwhelming; it looks like shared silences that don’t need filling, like hands brushing without urgency, like conversations that wander and return, like support that doesn’t keep score. I want to show up for you in the ways that matter, in the unglamorous moments, in the days when nothing feels extraordinary and that’s exactly what makes them beautiful. I want to be someone who adds to your life, not someone who takes from it. And I think the reason this confession feels so heavy and so light at the same time is because it comes from a place of truth rather than longing alone. I am not chasing a feeling; I am acknowledging one that has already proven itself through time, through patience, through restraint. I have held this quietly not because I was afraid, but because I wanted to be sure it was real, because I respect you too much to offer something unsteady. What I feel has survived silence, distance, uncertainty, and still remained soft, which tells me it is not fleeting. It is the kind of love that doesn’t need grand gestures to exist, the kind that would rather be consistent than impressive. If you are wondering what I want from you, the answer is simple and complex all at once: I want honesty, I want mutual care, I want a chance to see what this could become without pressure or fear. And if what you feel is different, if your heart is facing another direction, know that my respect for you will remain intact, that my care will not turn into resentment, because love that is real does not punish someone for being truthful. But if there is even a quiet echo in you when you read this, if something in your chest feels recognized rather than startled, then I want you to know that I am here with open hands, not reaching to take, but offering to share something genuine, something patient, something deeply human. I am not asking you to promise anything, only to consider the possibility that what we could build together would be kind, intentional, and real. I believe love should feel like a place you can rest, and that is exactly what I would want to be for you, if you ever chose to let me.
+
+      
+      
+
+      
+    
+      
+      
+
+
+    </p>
+  </div>
+
+  <script>
+    const correctPassword = "Destiny";
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const error = document.getElementById("error");
+
+      if (input === correctPassword) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("secret").style.display = "block";
+      } else {
+        error.textContent = "That isn’t it.";
+      }
+    }
+  </script>
+
+</body>
+</html>
